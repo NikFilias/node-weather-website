@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit',(e) => {
     const forecastElement = document.getElementById('Forecast')
 
     //Fetch API 
-    fetch('http://localhost:3000/weather?address=' + Location).then((response) => {
+    fetch('/weather?address=' + Location).then((response) => {
 
         response.json().then(({error, location, forecastData}) => {
             if (error) {
